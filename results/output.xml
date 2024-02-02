@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-01T21:50:32.354702" rpa="false" schemaversion="5">
+<suite id="s1" name="Login" source="C:\Users\Marillia\Desktop\teste-funcional-robot\suites\login\login.robot">
+<test id="s1-t1" name="TC01 - Login com sucesso" line="7">
+<kw name="Dado que o usuario esta na tela de login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:32.605110" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-01T21:50:32.604567" elapsed="2.198149"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-01T21:50:34.802716" elapsed="0.142484"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:32.603525" elapsed="2.342647"/>
+</kw>
+<kw name="Quando o usuario insere email valido" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:34.948812" elapsed="0.038412"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:34.989733" level="INFO">Typing text 'kylianmb@teste.com' into text field '//input[@id="email"]'.</msg>
+<arg>${login.Input_EmailLogin}</arg>
+<arg>${dados_login.Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:34.988722" elapsed="0.128862"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:34.947377" elapsed="0.170207"/>
+</kw>
+<kw name="E o usuario insere senha valida" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:35.118591" elapsed="0.056780"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:35.176414" level="INFO">Typing text '1234Teste' into text field '//input[@id="senha"]'.</msg>
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>${dados_login.Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:35.175371" elapsed="0.088475"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:35.118591" elapsed="0.146580"/>
+</kw>
+<kw name="E clica em &quot;Entrar&quot;" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Button_Logar}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:35.265171" elapsed="0.021354"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:35.286525" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${login.Button_Logar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:35.286525" elapsed="0.406957"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:35.265171" elapsed="0.429499"/>
+</kw>
+<kw name="Entao o sistema redireciona para a página inicial exibindo a mensagem &quot;Bem vindo, Kylian!&quot;" owner="login_page" source_name="Entao o sistema redireciona para a página inicial exibindo a mensagem ${Texto}">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:35.698899" level="INFO">Verifying element '//div[@class="alert alert-success"]' contains exact text 'Bem vindo, Kylian!'.</msg>
+<arg>${login.Msg_Welcome}</arg>
+<arg>Bem vindo, Kylian!</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-02-01T21:50:35.696877" elapsed="0.052160"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:35.695709" elapsed="0.053328"/>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-01T21:50:35.750128" elapsed="2.108039"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:35.750128" elapsed="2.109134"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:32.603525" elapsed="5.257255"/>
+</test>
+<test id="s1-t2" name="TC02 - Login com email inválido" line="14">
+<kw name="Dado que o usuario esta na tela de login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:37.871515" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-01T21:50:37.868511" elapsed="2.035859"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-01T21:50:39.905349" elapsed="0.119394"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:37.867425" elapsed="2.157318"/>
+</kw>
+<kw name="Quando o usuario insere email invalido" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:40.025716" elapsed="0.048337"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:40.075066" level="INFO">Typing text 'teste@teste.com' into text field '//input[@id="email"]'.</msg>
+<arg>${login.Input_EmailLogin}</arg>
+<arg>${dados_login.EmailInvalido}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:40.074053" elapsed="0.185699"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:40.025716" elapsed="0.234036"/>
+</kw>
+<kw name="E o usuario insere senha valida" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:40.260756" elapsed="0.028373"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:40.290523" level="INFO">Typing text '1234Teste' into text field '//input[@id="senha"]'.</msg>
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>${dados_login.Senha}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:40.289129" elapsed="0.118833"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:40.259752" elapsed="0.148210"/>
+</kw>
+<kw name="E clica em &quot;Entrar&quot;" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Button_Logar}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:40.409000" elapsed="0.018883"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:40.428883" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${login.Button_Logar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:40.427883" elapsed="0.405126"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:40.407962" elapsed="0.425047"/>
+</kw>
+<kw name="Entao o sistema deve exibir a mensagem &quot;Problemas com o login do usuário&quot;" owner="login_page">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:40.835026" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Problemas com o login do usuário'.</msg>
+<arg>${login.Msg_Erro}</arg>
+<arg>Problemas com o login do usuário</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-02-01T21:50:40.834016" elapsed="0.054260"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:40.834016" elapsed="0.054260"/>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-01T21:50:40.889381" elapsed="2.176473"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:40.889381" elapsed="2.176473"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:37.865788" elapsed="5.200066"/>
+</test>
+<test id="s1-t3" name="TC03 - Login com senha inválida" line="21">
+<kw name="Dado que o usuario esta na tela de login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:43.069497" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-01T21:50:43.068981" elapsed="2.084263"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-01T21:50:45.153244" elapsed="0.123275"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:43.067815" elapsed="2.208704"/>
+</kw>
+<kw name="Quando o usuario insere email valido" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:45.276519" elapsed="0.028354"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:45.307062" level="INFO">Typing text 'kylianmb@teste.com' into text field '//input[@id="email"]'.</msg>
+<arg>${login.Input_EmailLogin}</arg>
+<arg>${dados_login.Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:45.305980" elapsed="0.127240"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:45.276519" elapsed="0.156701"/>
+</kw>
+<kw name="E o usuario insere senha invalida" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:45.434228" elapsed="0.037995"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:45.474223" level="INFO">Typing text '124$$' into text field '//input[@id="senha"]'.</msg>
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>${dados_login.SenhaInvalida}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:45.473197" elapsed="0.100620"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:45.433220" elapsed="0.141889"/>
+</kw>
+<kw name="E clica em &quot;Entrar&quot;" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Button_Logar}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:45.575620" elapsed="0.022007"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:45.598626" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${login.Button_Logar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:45.597627" elapsed="0.393785"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:45.575620" elapsed="0.415792"/>
+</kw>
+<kw name="Entao o sistema deve exibir a mensagem &quot;Problemas com o login do usuário&quot;" owner="login_page">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:45.993687" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Problemas com o login do usuário'.</msg>
+<arg>${login.Msg_Erro}</arg>
+<arg>Problemas com o login do usuário</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-02-01T21:50:45.992648" elapsed="0.063117"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:45.992648" elapsed="0.063117"/>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-01T21:50:46.056821" elapsed="2.134630"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:46.056821" elapsed="2.134630"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:43.067815" elapsed="5.123636"/>
+</test>
+<test id="s1-t4" name="TC04 - Login com email em branco" line="28">
+<kw name="Dado que o usuario esta na tela de login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:48.194084" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-01T21:50:48.193575" elapsed="2.238739"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-01T21:50:50.433290" elapsed="0.134025"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:48.192484" elapsed="2.374831"/>
+</kw>
+<kw name="Quando o usuario nao preenche o campo email" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:50.568302" elapsed="0.038186"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:50.607557" elapsed="0.058187"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:50.567315" elapsed="0.098429"/>
+</kw>
+<kw name="E o usuario insere senha invalida" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:50.666747" elapsed="0.026093"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:50.693848" level="INFO">Typing text '124$$' into text field '//input[@id="senha"]'.</msg>
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>${dados_login.SenhaInvalida}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:50.692840" elapsed="0.118480"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:50.666747" elapsed="0.146036"/>
+</kw>
+<kw name="E clica em &quot;Entrar&quot;" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Button_Logar}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:50.812783" elapsed="0.021859"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:50.835682" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${login.Button_Logar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:50.834642" elapsed="0.157873"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:50.812783" elapsed="0.180949"/>
+</kw>
+<kw name="Entao o sistema deve exibir a mensagem &quot;Email é um campo obrigatório&quot;" owner="login_page">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:50.998772" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Email é um campo obrigatório'.</msg>
+<arg>${login.Msg_Erro}</arg>
+<arg>Email é um campo obrigatório</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-02-01T21:50:50.996756" elapsed="0.087021"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:50.995754" elapsed="0.088023"/>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-01T21:50:51.084816" elapsed="2.118400"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:51.083777" elapsed="2.119439"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:48.192484" elapsed="5.012162"/>
+</test>
+<test id="s1-t5" name="TC05 - Login com senha em branco" line="35">
+<kw name="Dado que o usuario esta na tela de login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:53.215388" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-01T21:50:53.211915" elapsed="2.062737"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-01T21:50:55.275649" elapsed="0.133808"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:53.210920" elapsed="2.199551"/>
+</kw>
+<kw name="Quando o usuario insere email valido" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:55.410471" elapsed="0.094997"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:55.509482" level="INFO">Typing text 'kylianmb@teste.com' into text field '//input[@id="email"]'.</msg>
+<arg>${login.Input_EmailLogin}</arg>
+<arg>${dados_login.Email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:55.505468" elapsed="0.170851"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:55.410471" elapsed="0.267035"/>
+</kw>
+<kw name="E o usuario nao preenche o campo senha" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:55.677506" elapsed="0.042244"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:55.720856" elapsed="0.033065"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:55.677506" elapsed="0.076415"/>
+</kw>
+<kw name="E clica em &quot;Entrar&quot;" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Button_Logar}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:50:55.754928" elapsed="0.019416"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:55.775254" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${login.Button_Logar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:50:55.774344" elapsed="0.189400"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:55.754928" elapsed="0.208816"/>
+</kw>
+<kw name="Entao o sistema deve exibir a mensagem &quot;Senha é um campo obrigatório&quot;" owner="login_page">
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:55.968183" level="INFO">Verifying element '//div[@class="alert alert-danger"]' contains exact text 'Senha é um campo obrigatório'.</msg>
+<arg>${login.Msg_Erro}</arg>
+<arg>Senha é um campo obrigatório</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-02-01T21:50:55.967201" elapsed="0.040809"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:55.965173" elapsed="0.042837"/>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-01T21:50:56.009008" elapsed="2.112284"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:56.009008" elapsed="2.113314"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:53.209217" elapsed="4.914104"/>
+</test>
+<test id="s1-t6" name="TC06 - Login com todos os campos em branco" line="42">
+<kw name="Dado que o usuario esta na tela de login" owner="login_page">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:50:58.132074" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<arg>${geral.URL}</arg>
+<arg>${geral.Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-01T21:50:58.129075" elapsed="2.111259"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-01T21:51:00.241334" elapsed="0.135156"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:50:58.128074" elapsed="2.248416"/>
+</kw>
+<kw name="Quando o usuario nao preenche o campo email" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:51:00.378504" elapsed="0.037296"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${login.Input_EmailLogin}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:51:00.415800" elapsed="0.065738"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:51:00.378504" elapsed="0.103034"/>
+</kw>
+<kw name="E o usuario nao preenche o campo senha" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:51:00.482799" elapsed="0.031288"/>
+</kw>
+<kw name="Clear Element Text" owner="SeleniumLibrary">
+<arg>${login.Input_SenhaLogin}</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:51:00.514087" elapsed="0.039821"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:51:00.481538" elapsed="0.072370"/>
+</kw>
+<kw name="E clica em &quot;Entrar&quot;" owner="login_page">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${login.Button_Logar}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-01T21:51:00.555124" elapsed="0.031036"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:51:00.587171" level="INFO">Clicking element '//button[@class="btn btn-primary"]'.</msg>
+<arg>${login.Button_Logar}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-01T21:51:00.586160" elapsed="0.169386"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:51:00.553908" elapsed="0.202658"/>
+</kw>
+<kw name="Entao o sistema deve exibir a mensagem &quot;Email é um campo obrigatório&quot;, &quot;Senha é um campo obrigatório&quot;" owner="login_page">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-02-01T21:51:01.033175" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-01T21:51:01.033175" level="FAIL">Element '//div[@class="alert alert-danger"]' should have contained text '"Email é um campo obrigatório", "Senha é um campo obrigatório"' but its text was 'Email é um campo obrigatório'.</msg>
+<arg>${login.Msg_Erro}</arg>
+<arg>"Email é um campo obrigatório", "Senha é um campo obrigatório"</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="FAIL" start="2024-02-01T21:51:00.759562" elapsed="0.275606">Element '//div[@class="alert alert-danger"]' should have contained text '"Email é um campo obrigatório", "Senha é um campo obrigatório"' but its text was 'Email é um campo obrigatório'.</status>
+</kw>
+<status status="FAIL" start="2024-02-01T21:51:00.757563" elapsed="0.277605">Element '//div[@class="alert alert-danger"]' should have contained text '"Email é um campo obrigatório", "Senha é um campo obrigatório"' but its text was 'Email é um campo obrigatório'.</status>
+</kw>
+<kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-02-01T21:51:01.036222" elapsed="2.102164"/>
+</kw>
+<status status="PASS" start="2024-02-01T21:51:01.036222" elapsed="2.103072"/>
+</kw>
+<status status="FAIL" start="2024-02-01T21:50:58.127046" elapsed="5.013249">Element '//div[@class="alert alert-danger"]' should have contained text '"Email é um campo obrigatório", "Senha é um campo obrigatório"' but its text was 'Email é um campo obrigatório'.</status>
+</test>
+<status status="FAIL" start="2024-02-01T21:50:32.356221" elapsed="30.789294"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="1" skip="0" id="s1" name="Login">Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
