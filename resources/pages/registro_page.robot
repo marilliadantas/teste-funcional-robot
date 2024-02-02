@@ -12,8 +12,6 @@ Resource    ../main.robot
 ...   Alert_Message=//div[@role="alert"]
 
 *** Keywords ***
-
-
 Dado que o usuario esta na tela inicial do site
     Open Browser  ${geral.URL}  ${geral.Browser}    options=${geral.Headless}
     Maximize Browser Window

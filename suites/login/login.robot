@@ -9,7 +9,7 @@ TC01 - Login com sucesso
     Quando o usuario insere email valido
     E o usuario insere senha valida
     E clica em "Entrar"
-    Entao o sistema redireciona para a página inicial exibindo a mensagem Bem vindo, Kylian!"
+    Entao o sistema redireciona para a página inicial exibindo a mensagem Bem vindo, Kylian!
 
 TC02 - Login com email inválido
     Dado que o usuario esta na tela de login

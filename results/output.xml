@@ -1,761 +1,761 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-02T15:16:45.393196" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-02T15:30:26.369345" rpa="false" schemaversion="5">
 <suite id="s1" name="Registro" source="D:\Users\maril\OneDrive\Área de Trabalho\QA\Projetos Robot\teste-funcional-robot\suites\registro\registro.robot">
 <test id="s1-t1" name="TC01 - Cadastro com sucesso" line="6">
 <kw name="Dado que o usuario esta na tela inicial do site" owner="registro_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:46.095888" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-02-02T15:30:27.069437" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${geral.URL}</arg>
 <arg>${geral.Browser}</arg>
 <arg>options=${geral.Headless}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-02T15:16:46.095888" elapsed="2.504698"/>
+<status status="PASS" start="2024-02-02T15:30:27.067931" elapsed="2.377594"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-02T15:16:48.600586" elapsed="0.114953"/>
+<status status="PASS" start="2024-02-02T15:30:29.445525" elapsed="0.115833"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:46.094276" elapsed="2.621263"/>
+<status status="PASS" start="2024-02-02T15:30:27.066413" elapsed="2.494945"/>
 </kw>
 <kw name="E clica no link &quot;Novo Usuário?&quot;" owner="registro_page">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:48.724644" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
+<msg time="2024-02-02T15:30:29.564480" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
 <arg>${registro.Link_Registro}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:48.720652" elapsed="0.290898"/>
+<status status="PASS" start="2024-02-02T15:30:29.563480" elapsed="0.300964"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:48.718624" elapsed="0.292926"/>
+<status status="PASS" start="2024-02-02T15:30:29.562440" elapsed="0.302004"/>
 </kw>
 <kw name="Quando preenche o campo nome" owner="registro_page">
 <kw name="First Name" owner="FakerLibrary">
-<msg time="2024-02-02T15:16:49.012054" level="INFO">${nome} = João</msg>
+<msg time="2024-02-02T15:30:29.865451" level="INFO">${nome} = Giovanna</msg>
 <var>${nome}</var>
-<status status="PASS" start="2024-02-02T15:16:49.012054" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:29.865451" elapsed="0.000999"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:49.013143" level="INFO">Typing text 'João' into text field '//input[@id="nome"]'.</msg>
+<msg time="2024-02-02T15:30:29.866450" level="INFO">Typing text 'Giovanna' into text field '//input[@id="nome"]'.</msg>
 <arg>${registro.Input_Nome}</arg>
 <arg>${nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.012054" elapsed="0.082977"/>
+<status status="PASS" start="2024-02-02T15:30:29.866450" elapsed="0.095842"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:49.012054" elapsed="0.082977"/>
+<status status="PASS" start="2024-02-02T15:30:29.865451" elapsed="0.096841"/>
 </kw>
 <kw name="E preenche o campo email" owner="registro_page">
 <kw name="Free Email" owner="FakerLibrary">
-<msg time="2024-02-02T15:16:49.096039" level="INFO">${email} = joanaramos@uol.com.br</msg>
+<msg time="2024-02-02T15:30:29.963518" level="INFO">${email} = ana07@yahoo.com.br</msg>
 <var>${email}</var>
-<status status="PASS" start="2024-02-02T15:16:49.096039" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:29.963518" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:49.097037" level="INFO">Typing text 'joanaramos@uol.com.br' into text field '//input[@id="email"]'.</msg>
+<msg time="2024-02-02T15:30:29.964526" level="INFO">Typing text 'ana07@yahoo.com.br' into text field '//input[@id="email"]'.</msg>
 <arg>${registro.Input_Email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.096039" elapsed="0.085700"/>
+<status status="PASS" start="2024-02-02T15:30:29.963518" elapsed="0.073966"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:49.095031" elapsed="0.087722"/>
+<status status="PASS" start="2024-02-02T15:30:29.963518" elapsed="0.073966"/>
 </kw>
 <kw name="E preenche o campo senha" owner="registro_page">
 <kw name="Password" owner="FakerLibrary">
-<msg time="2024-02-02T15:16:49.183748" level="INFO">${senha} = x6S!rm$i(4</msg>
+<msg time="2024-02-02T15:30:30.038563" level="INFO">${senha} = tF0@VjlP%+</msg>
 <var>${senha}</var>
 <doc>Generate a random password of the specified ``length``.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.182753" elapsed="0.000995"/>
+<status status="PASS" start="2024-02-02T15:30:30.038563" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:49.183748" level="INFO">Typing text 'x6S!rm$i(4' into text field '//input[@id="senha"]'.</msg>
+<msg time="2024-02-02T15:30:30.039486" level="INFO">Typing text 'tF0@VjlP%+' into text field '//input[@id="senha"]'.</msg>
 <arg>${registro.Input_Senha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.183748" elapsed="0.131005"/>
+<status status="PASS" start="2024-02-02T15:30:30.038563" elapsed="0.070784"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:49.182753" elapsed="0.132000"/>
+<status status="PASS" start="2024-02-02T15:30:30.038563" elapsed="0.070784"/>
 </kw>
 <kw name="E clica no botao cadastrar" owner="registro_page">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${registro.Button_Cadastrar}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.315761" elapsed="0.026996"/>
+<status status="PASS" start="2024-02-02T15:30:30.109347" elapsed="0.022500"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:49.343770" level="INFO">Clicking element '//input[@value='Cadastrar']'.</msg>
+<msg time="2024-02-02T15:30:30.132355" level="INFO">Clicking element '//input[@value='Cadastrar']'.</msg>
 <arg>${registro.Button_Cadastrar}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.342757" elapsed="0.475145"/>
+<status status="PASS" start="2024-02-02T15:30:30.132355" elapsed="0.467730"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:49.315761" elapsed="0.502141"/>
+<status status="PASS" start="2024-02-02T15:30:30.109347" elapsed="0.491664"/>
 </kw>
 <kw name="Então o sistema exibe a mensagem Usuário inserido com sucesso" owner="registro_page" source_name="Então o sistema exibe a mensagem ${Text}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${registro.Alert_Message}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.817902" elapsed="0.034684"/>
+<status status="PASS" start="2024-02-02T15:30:30.601011" elapsed="0.021083"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:49.882504" level="INFO">${mensagem} = Usuário inserido com sucesso</msg>
+<msg time="2024-02-02T15:30:30.638443" level="INFO">${mensagem} = Usuário inserido com sucesso</msg>
 <var>${mensagem}</var>
 <arg>${registro.Alert_Message}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.852586" elapsed="0.029918"/>
+<status status="PASS" start="2024-02-02T15:30:30.622094" elapsed="0.016349"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${mensagem}</arg>
 <arg>${Text}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.882504" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:30.638443" elapsed="0.000999"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:49.817902" elapsed="0.064602"/>
+<status status="PASS" start="2024-02-02T15:30:30.601011" elapsed="0.038431"/>
 </kw>
 <kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-02T15:16:49.883607" elapsed="2.073858"/>
+<status status="PASS" start="2024-02-02T15:30:30.641001" elapsed="2.069532"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:49.883607" elapsed="2.074400"/>
+<status status="PASS" start="2024-02-02T15:30:30.639442" elapsed="2.072642"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:46.093274" elapsed="5.864733"/>
+<status status="PASS" start="2024-02-02T15:30:27.065494" elapsed="5.647877"/>
 </test>
 <test id="s1-t2" name="TC02 - Cadastro com sucesso - ENTER" line="15">
 <kw name="Dado que o usuario esta na tela inicial do site" owner="registro_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:51.960662" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-02-02T15:30:32.725194" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${geral.URL}</arg>
 <arg>${geral.Browser}</arg>
 <arg>options=${geral.Headless}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-02T15:16:51.960157" elapsed="2.452708"/>
+<status status="PASS" start="2024-02-02T15:30:32.720651" elapsed="2.573109"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-02T15:16:54.412865" elapsed="0.128166"/>
+<status status="PASS" start="2024-02-02T15:30:35.293760" elapsed="0.114449"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:51.960157" elapsed="2.580874"/>
+<status status="PASS" start="2024-02-02T15:30:32.719524" elapsed="2.688685"/>
 </kw>
 <kw name="E clica no link &quot;Novo Usuário?&quot;" owner="registro_page">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:54.543571" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
+<msg time="2024-02-02T15:30:35.413613" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
 <arg>${registro.Link_Registro}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:54.542564" elapsed="0.273293"/>
+<status status="PASS" start="2024-02-02T15:30:35.411928" elapsed="0.332259"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:54.542058" elapsed="0.273799"/>
+<status status="PASS" start="2024-02-02T15:30:35.410978" elapsed="0.334301"/>
 </kw>
 <kw name="Quando preenche o campo nome" owner="registro_page">
 <kw name="First Name" owner="FakerLibrary">
-<msg time="2024-02-02T15:16:54.815857" level="INFO">${nome} = Alexandre</msg>
+<msg time="2024-02-02T15:30:35.745788" level="INFO">${nome} = Leandro</msg>
 <var>${nome}</var>
-<status status="PASS" start="2024-02-02T15:16:54.815857" elapsed="0.001506"/>
+<status status="PASS" start="2024-02-02T15:30:35.745788" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:54.817882" level="INFO">Typing text 'Alexandre' into text field '//input[@id="nome"]'.</msg>
+<msg time="2024-02-02T15:30:35.746794" level="INFO">Typing text 'Leandro' into text field '//input[@id="nome"]'.</msg>
 <arg>${registro.Input_Nome}</arg>
 <arg>${nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:54.817363" elapsed="0.098117"/>
+<status status="PASS" start="2024-02-02T15:30:35.745788" elapsed="0.081448"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:54.815857" elapsed="0.099623"/>
+<status status="PASS" start="2024-02-02T15:30:35.745788" elapsed="0.081448"/>
 </kw>
 <kw name="E preenche o campo email" owner="registro_page">
 <kw name="Free Email" owner="FakerLibrary">
-<msg time="2024-02-02T15:16:54.916564" level="INFO">${email} = rafaelarocha@gmail.com</msg>
+<msg time="2024-02-02T15:30:35.828271" level="INFO">${email} = davi-lucas20@gmail.com</msg>
 <var>${email}</var>
-<status status="PASS" start="2024-02-02T15:16:54.916564" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:35.828271" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:54.917071" level="INFO">Typing text 'rafaelarocha@gmail.com' into text field '//input[@id="email"]'.</msg>
+<msg time="2024-02-02T15:30:35.829275" level="INFO">Typing text 'davi-lucas20@gmail.com' into text field '//input[@id="email"]'.</msg>
 <arg>${registro.Input_Email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:54.916564" elapsed="0.105133"/>
+<status status="PASS" start="2024-02-02T15:30:35.828271" elapsed="0.084383"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:54.915480" elapsed="0.107234"/>
+<status status="PASS" start="2024-02-02T15:30:35.828271" elapsed="0.084383"/>
 </kw>
 <kw name="E preenche o campo senha" owner="registro_page">
 <kw name="Password" owner="FakerLibrary">
-<msg time="2024-02-02T15:16:55.022714" level="INFO">${senha} = SN3SonWfD)</msg>
+<msg time="2024-02-02T15:30:35.913739" level="INFO">${senha} = s+n4OX@p@k</msg>
 <var>${senha}</var>
 <doc>Generate a random password of the specified ``length``.</doc>
-<status status="PASS" start="2024-02-02T15:16:55.022714" elapsed="0.001417"/>
+<status status="PASS" start="2024-02-02T15:30:35.913739" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:55.024131" level="INFO">Typing text 'SN3SonWfD)' into text field '//input[@id="senha"]'.</msg>
+<msg time="2024-02-02T15:30:35.914780" level="INFO">Typing text 's+n4OX@p@k' into text field '//input[@id="senha"]'.</msg>
 <arg>${registro.Input_Senha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:55.024131" elapsed="0.085851"/>
+<status status="PASS" start="2024-02-02T15:30:35.913739" elapsed="0.074168"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:55.022714" elapsed="0.087268"/>
+<status status="PASS" start="2024-02-02T15:30:35.912654" elapsed="0.075253"/>
 </kw>
 <kw name="E pressiona ENTER no teclado" owner="registro_page">
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:55.110982" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
-<msg time="2024-02-02T15:16:55.802933" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-02-02T15:16:55.804337" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2024-02-02T15:30:35.989417" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
+<msg time="2024-02-02T15:30:36.760504" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-02-02T15:30:36.760504" level="INFO">Releasing special key ENTER.</msg>
 <arg>${registro.Button_Cadastrar}</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-02-02T15:16:55.110982" elapsed="0.699021"/>
+<status status="PASS" start="2024-02-02T15:30:35.987907" elapsed="0.777603"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:55.110982" elapsed="0.699021"/>
+<status status="PASS" start="2024-02-02T15:30:35.987907" elapsed="0.777603"/>
 </kw>
 <kw name="Então o sistema exibe a mensagem Usuário inserido com sucesso" owner="registro_page" source_name="Então o sistema exibe a mensagem ${Text}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${registro.Alert_Message}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-02T15:16:55.811011" elapsed="0.026842"/>
+<status status="PASS" start="2024-02-02T15:30:36.767015" elapsed="0.019007"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:55.860249" level="INFO">${mensagem} = Usuário inserido com sucesso</msg>
+<msg time="2024-02-02T15:30:36.801394" level="INFO">${mensagem} = Usuário inserido com sucesso</msg>
 <var>${mensagem}</var>
 <arg>${registro.Alert_Message}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:16:55.838913" elapsed="0.021336"/>
+<status status="PASS" start="2024-02-02T15:30:36.786022" elapsed="0.015372"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${mensagem}</arg>
 <arg>${Text}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:16:55.861529" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:36.801394" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:55.810003" elapsed="0.051526"/>
+<status status="PASS" start="2024-02-02T15:30:36.765510" elapsed="0.035884"/>
 </kw>
 <kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-02T15:16:55.861529" elapsed="2.059144"/>
+<status status="PASS" start="2024-02-02T15:30:36.802410" elapsed="2.053691"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:55.861529" elapsed="2.059144"/>
+<status status="PASS" start="2024-02-02T15:30:36.802410" elapsed="2.053691"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:51.958988" elapsed="5.962716"/>
+<status status="PASS" start="2024-02-02T15:30:32.717181" elapsed="6.141007"/>
 </test>
 <test id="s1-t3" name="TC03 - Cadastro com usuário existente" line="24">
 <kw name="Dado que o usuario esta na tela inicial do site" owner="registro_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:16:57.933029" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-02-02T15:30:38.869633" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${geral.URL}</arg>
 <arg>${geral.Browser}</arg>
 <arg>options=${geral.Headless}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-02T15:16:57.929010" elapsed="2.256828"/>
+<status status="PASS" start="2024-02-02T15:30:38.865054" elapsed="2.290883"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-02T15:17:00.185838" elapsed="0.105213"/>
+<status status="PASS" start="2024-02-02T15:30:41.155937" elapsed="0.111984"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:57.927986" elapsed="2.363065"/>
+<status status="PASS" start="2024-02-02T15:30:38.863962" elapsed="2.403959"/>
 </kw>
 <kw name="E clica no link &quot;Novo Usuário?&quot;" owner="registro_page">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:00.293066" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
+<msg time="2024-02-02T15:30:41.270533" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
 <arg>${registro.Link_Registro}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:00.292061" elapsed="0.266141"/>
+<status status="PASS" start="2024-02-02T15:30:41.269481" elapsed="0.270514"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:00.292061" elapsed="0.267142"/>
+<status status="PASS" start="2024-02-02T15:30:41.267921" elapsed="0.273100"/>
 </kw>
 <kw name="Quando preenche o campo nome" owner="registro_page">
 <kw name="First Name" owner="FakerLibrary">
-<msg time="2024-02-02T15:17:00.560213" level="INFO">${nome} = Clara</msg>
+<msg time="2024-02-02T15:30:41.541176" level="INFO">${nome} = Calebe</msg>
 <var>${nome}</var>
-<status status="PASS" start="2024-02-02T15:17:00.560213" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:41.541176" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:00.560213" level="INFO">Typing text 'Clara' into text field '//input[@id="nome"]'.</msg>
+<msg time="2024-02-02T15:30:41.542291" level="INFO">Typing text 'Calebe' into text field '//input[@id="nome"]'.</msg>
 <arg>${registro.Input_Nome}</arg>
 <arg>${nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:00.560213" elapsed="0.077652"/>
+<status status="PASS" start="2024-02-02T15:30:41.541176" elapsed="0.076504"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:00.559203" elapsed="0.078662"/>
+<status status="PASS" start="2024-02-02T15:30:41.541176" elapsed="0.077811"/>
 </kw>
 <kw name="E preenche o campo email com email ja cadastrado" owner="registro_page">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:00.639262" level="INFO">Typing text 'kylianmb@teste.com' into text field '//input[@id="email"]'.</msg>
+<msg time="2024-02-02T15:30:41.621548" level="INFO">Typing text 'kylianmb@teste.com' into text field '//input[@id="email"]'.</msg>
 <arg>${registro.Input_Email}</arg>
 <arg>${dados_login.Email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:00.637865" elapsed="0.077566"/>
+<status status="PASS" start="2024-02-02T15:30:41.619492" elapsed="0.067472"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:00.637865" elapsed="0.077566"/>
+<status status="PASS" start="2024-02-02T15:30:41.618987" elapsed="0.067977"/>
 </kw>
 <kw name="E preenche o campo senha" owner="registro_page">
 <kw name="Password" owner="FakerLibrary">
-<msg time="2024-02-02T15:17:00.716439" level="INFO">${senha} = *m3hOHp0uo</msg>
+<msg time="2024-02-02T15:30:41.688068" level="INFO">${senha} = #6TYXeNkDA</msg>
 <var>${senha}</var>
 <doc>Generate a random password of the specified ``length``.</doc>
-<status status="PASS" start="2024-02-02T15:17:00.716439" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:41.686964" elapsed="0.001104"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:00.717480" level="INFO">Typing text '*m3hOHp0uo' into text field '//input[@id="senha"]'.</msg>
+<msg time="2024-02-02T15:30:41.688068" level="INFO">Typing text '#6TYXeNkDA' into text field '//input[@id="senha"]'.</msg>
 <arg>${registro.Input_Senha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:00.716976" elapsed="0.094480"/>
+<status status="PASS" start="2024-02-02T15:30:41.688068" elapsed="0.070725"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:00.716439" elapsed="0.095522"/>
+<status status="PASS" start="2024-02-02T15:30:41.686964" elapsed="0.071829"/>
 </kw>
 <kw name="E pressiona ENTER no teclado" owner="registro_page">
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:00.813203" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
-<msg time="2024-02-02T15:17:01.561868" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-02-02T15:17:01.561868" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2024-02-02T15:30:41.760334" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
+<msg time="2024-02-02T15:30:42.450200" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-02-02T15:30:42.450200" level="INFO">Releasing special key ENTER.</msg>
 <arg>${registro.Button_Cadastrar}</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:00.811961" elapsed="0.756811"/>
+<status status="PASS" start="2024-02-02T15:30:41.759299" elapsed="0.696963"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:00.811961" elapsed="0.756811"/>
+<status status="PASS" start="2024-02-02T15:30:41.759299" elapsed="0.696963"/>
 </kw>
 <kw name="Então o sistema exibe a mensagem Endereço de email já utilizado" owner="registro_page" source_name="Então o sistema exibe a mensagem ${Text}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${registro.Alert_Message}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-02T15:17:01.568772" elapsed="0.023491"/>
+<status status="PASS" start="2024-02-02T15:30:42.457279" elapsed="0.018098"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:01.612952" level="INFO">${mensagem} = Endereço de email já utilizado</msg>
+<msg time="2024-02-02T15:30:42.494000" level="INFO">${mensagem} = Endereço de email já utilizado</msg>
 <var>${mensagem}</var>
 <arg>${registro.Alert_Message}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:01.592263" elapsed="0.020689"/>
+<status status="PASS" start="2024-02-02T15:30:42.476691" elapsed="0.017309"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${mensagem}</arg>
 <arg>${Text}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:17:01.612952" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:42.494000" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:01.568772" elapsed="0.044180"/>
+<status status="PASS" start="2024-02-02T15:30:42.457279" elapsed="0.037728"/>
 </kw>
 <kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:01.613997" elapsed="2.043430"/>
+<status status="PASS" start="2024-02-02T15:30:42.495007" elapsed="2.055439"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:01.613997" elapsed="2.043982"/>
+<status status="PASS" start="2024-02-02T15:30:42.495007" elapsed="2.055439"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:16:57.925866" elapsed="5.732113"/>
+<status status="PASS" start="2024-02-02T15:30:38.862323" elapsed="5.689681"/>
 </test>
 <test id="s1-t4" name="TC04 - Cadastro com nome em branco" line="33">
 <kw name="Dado que o usuario esta na tela inicial do site" owner="registro_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:03.662069" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-02-02T15:30:44.565103" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${geral.URL}</arg>
 <arg>${geral.Browser}</arg>
 <arg>options=${geral.Headless}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-02T15:17:03.661060" elapsed="2.280024"/>
+<status status="PASS" start="2024-02-02T15:30:44.558472" elapsed="2.211795"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-02T15:17:05.941084" elapsed="0.110762"/>
+<status status="PASS" start="2024-02-02T15:30:46.770267" elapsed="0.115602"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:03.661060" elapsed="2.390786"/>
+<status status="PASS" start="2024-02-02T15:30:44.557539" elapsed="2.328330"/>
 </kw>
 <kw name="E clica no link &quot;Novo Usuário?&quot;" owner="registro_page">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:06.053883" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
+<msg time="2024-02-02T15:30:46.892024" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
 <arg>${registro.Link_Registro}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:06.052857" elapsed="0.279433"/>
+<status status="PASS" start="2024-02-02T15:30:46.889437" elapsed="0.293164"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:06.052857" elapsed="0.279433"/>
+<status status="PASS" start="2024-02-02T15:30:46.887861" elapsed="0.294740"/>
 </kw>
 <kw name="Quando preenche nao preenche o campo nome" owner="registro_page">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${registro.Input_Nome}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:06.333286" elapsed="0.037854"/>
+<status status="PASS" start="2024-02-02T15:30:47.183620" elapsed="0.039881"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:06.333286" elapsed="0.037854"/>
+<status status="PASS" start="2024-02-02T15:30:47.183620" elapsed="0.039881"/>
 </kw>
 <kw name="E preenche o campo email" owner="registro_page">
 <kw name="Free Email" owner="FakerLibrary">
-<msg time="2024-02-02T15:17:06.372140" level="INFO">${email} = elisada-paz@ig.com.br</msg>
+<msg time="2024-02-02T15:30:47.224702" level="INFO">${email} = goncalvesjuliana@ig.com.br</msg>
 <var>${email}</var>
-<status status="PASS" start="2024-02-02T15:17:06.372140" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:47.224702" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:06.373138" level="INFO">Typing text 'elisada-paz@ig.com.br' into text field '//input[@id="email"]'.</msg>
+<msg time="2024-02-02T15:30:47.225707" level="INFO">Typing text 'goncalvesjuliana@ig.com.br' into text field '//input[@id="email"]'.</msg>
 <arg>${registro.Input_Email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:06.372140" elapsed="0.079001"/>
+<status status="PASS" start="2024-02-02T15:30:47.224702" elapsed="0.077570"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:06.372140" elapsed="0.079001"/>
+<status status="PASS" start="2024-02-02T15:30:47.223501" elapsed="0.078771"/>
 </kw>
 <kw name="E preenche o campo senha" owner="registro_page">
 <kw name="Password" owner="FakerLibrary">
-<msg time="2024-02-02T15:17:06.451141" level="INFO">${senha} = @b*1!ZyJ1E</msg>
+<msg time="2024-02-02T15:30:47.302778" level="INFO">${senha} = bUzOFtUG(8</msg>
 <var>${senha}</var>
 <doc>Generate a random password of the specified ``length``.</doc>
-<status status="PASS" start="2024-02-02T15:17:06.451141" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:47.302778" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:06.452637" level="INFO">Typing text '@b*1!ZyJ1E' into text field '//input[@id="senha"]'.</msg>
+<msg time="2024-02-02T15:30:47.303783" level="INFO">Typing text 'bUzOFtUG(8' into text field '//input[@id="senha"]'.</msg>
 <arg>${registro.Input_Senha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:06.451141" elapsed="0.126102"/>
+<status status="PASS" start="2024-02-02T15:30:47.302778" elapsed="0.068591"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:06.451141" elapsed="0.126102"/>
+<status status="PASS" start="2024-02-02T15:30:47.302778" elapsed="0.068591"/>
 </kw>
 <kw name="E pressiona ENTER no teclado" owner="registro_page">
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:06.578761" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
-<msg time="2024-02-02T15:17:07.084200" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-02-02T15:17:07.084200" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2024-02-02T15:30:47.373420" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
+<msg time="2024-02-02T15:30:47.893248" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-02-02T15:30:47.893248" level="INFO">Releasing special key ENTER.</msg>
 <arg>${registro.Button_Cadastrar}</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:06.578761" elapsed="0.512198"/>
+<status status="PASS" start="2024-02-02T15:30:47.372378" elapsed="0.525288"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:06.578255" elapsed="0.512704"/>
+<status status="PASS" start="2024-02-02T15:30:47.372378" elapsed="0.525288"/>
 </kw>
 <kw name="Então o sistema exibe a mensagem Nome é um campo obrigatório" owner="registro_page" source_name="Então o sistema exibe a mensagem ${Text}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${registro.Alert_Message}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-02T15:17:07.091964" elapsed="0.021384"/>
+<status status="PASS" start="2024-02-02T15:30:47.898773" elapsed="0.018030"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:07.132395" level="INFO">${mensagem} = Nome é um campo obrigatório</msg>
+<msg time="2024-02-02T15:30:47.961543" level="INFO">${mensagem} = Nome é um campo obrigatório</msg>
 <var>${mensagem}</var>
 <arg>${registro.Alert_Message}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:07.113782" elapsed="0.019612"/>
+<status status="PASS" start="2024-02-02T15:30:47.918035" elapsed="0.043508"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${mensagem}</arg>
 <arg>${Text}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:17:07.133394" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:47.961543" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:07.090959" elapsed="0.042435"/>
+<status status="PASS" start="2024-02-02T15:30:47.898773" elapsed="0.062770"/>
 </kw>
 <kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:07.134394" elapsed="2.046338"/>
+<status status="PASS" start="2024-02-02T15:30:47.962736" elapsed="2.061828"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:07.133394" elapsed="2.047338"/>
+<status status="PASS" start="2024-02-02T15:30:47.962736" elapsed="2.061828"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:03.660540" elapsed="5.521225"/>
+<status status="PASS" start="2024-02-02T15:30:44.555533" elapsed="5.469613"/>
 </test>
 <test id="s1-t5" name="TC05 - Cadastro com email em branco" line="42">
 <kw name="Dado que o usuario esta na tela inicial do site" owner="registro_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:09.194069" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-02-02T15:30:50.028265" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${geral.URL}</arg>
 <arg>${geral.Browser}</arg>
 <arg>options=${geral.Headless}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-02T15:17:09.190074" elapsed="2.262867"/>
+<status status="PASS" start="2024-02-02T15:30:50.026208" elapsed="2.479976"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-02T15:17:11.452941" elapsed="0.136289"/>
+<status status="PASS" start="2024-02-02T15:30:52.507444" elapsed="0.113465"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:09.189072" elapsed="2.400389"/>
+<status status="PASS" start="2024-02-02T15:30:50.026208" elapsed="2.594701"/>
 </kw>
 <kw name="E clica no link &quot;Novo Usuário?&quot;" owner="registro_page">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:11.590468" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
+<msg time="2024-02-02T15:30:52.622919" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
 <arg>${registro.Link_Registro}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:11.590468" elapsed="0.269526"/>
+<status status="PASS" start="2024-02-02T15:30:52.621919" elapsed="0.277918"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:11.589461" elapsed="0.270533"/>
+<status status="PASS" start="2024-02-02T15:30:52.621919" elapsed="0.278441"/>
 </kw>
 <kw name="Quando preenche o campo nome" owner="registro_page">
 <kw name="First Name" owner="FakerLibrary">
-<msg time="2024-02-02T15:17:11.860852" level="INFO">${nome} = Ana Luiza</msg>
+<msg time="2024-02-02T15:30:52.900360" level="INFO">${nome} = Gabrielly</msg>
 <var>${nome}</var>
-<status status="PASS" start="2024-02-02T15:17:11.860852" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:52.900360" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:11.861858" level="INFO">Typing text 'Ana Luiza' into text field '//input[@id="nome"]'.</msg>
+<msg time="2024-02-02T15:30:52.901559" level="INFO">Typing text 'Gabrielly' into text field '//input[@id="nome"]'.</msg>
 <arg>${registro.Input_Nome}</arg>
 <arg>${nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:11.860852" elapsed="0.079236"/>
+<status status="PASS" start="2024-02-02T15:30:52.901559" elapsed="0.103847"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:11.860852" elapsed="0.080230"/>
+<status status="PASS" start="2024-02-02T15:30:52.900360" elapsed="0.106052"/>
 </kw>
 <kw name="E nao preenche o campo email" owner="registro_page">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${registro.Input_Email}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:11.941587" elapsed="0.024634"/>
+<status status="PASS" start="2024-02-02T15:30:53.006412" elapsed="0.028412"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:11.941082" elapsed="0.025139"/>
+<status status="PASS" start="2024-02-02T15:30:53.006412" elapsed="0.028412"/>
 </kw>
 <kw name="E preenche o campo senha" owner="registro_page">
 <kw name="Password" owner="FakerLibrary">
-<msg time="2024-02-02T15:17:11.967222" level="INFO">${senha} = st!7@M8m)D</msg>
+<msg time="2024-02-02T15:30:53.035853" level="INFO">${senha} = 6CA3jLtml@</msg>
 <var>${senha}</var>
 <doc>Generate a random password of the specified ``length``.</doc>
-<status status="PASS" start="2024-02-02T15:17:11.967222" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:53.035853" elapsed="0.000000"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:11.968231" level="INFO">Typing text 'st!7@M8m)D' into text field '//input[@id="senha"]'.</msg>
+<msg time="2024-02-02T15:30:53.036884" level="INFO">Typing text '6CA3jLtml@' into text field '//input[@id="senha"]'.</msg>
 <arg>${registro.Input_Senha}</arg>
 <arg>${senha}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:11.967727" elapsed="0.069365"/>
+<status status="PASS" start="2024-02-02T15:30:53.035853" elapsed="0.129078"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:11.967222" elapsed="0.069870"/>
+<status status="PASS" start="2024-02-02T15:30:53.035853" elapsed="0.129078"/>
 </kw>
 <kw name="E pressiona ENTER no teclado" owner="registro_page">
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:12.038605" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
-<msg time="2024-02-02T15:17:12.582986" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-02-02T15:17:12.582986" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2024-02-02T15:30:53.166248" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
+<msg time="2024-02-02T15:30:53.651021" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-02-02T15:30:53.651021" level="INFO">Releasing special key ENTER.</msg>
 <arg>${registro.Button_Cadastrar}</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:12.038099" elapsed="0.551713"/>
+<status status="PASS" start="2024-02-02T15:30:53.164931" elapsed="0.490849"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:12.037092" elapsed="0.552720"/>
+<status status="PASS" start="2024-02-02T15:30:53.164931" elapsed="0.490849"/>
 </kw>
 <kw name="Então o sistema exibe a mensagem Email é um campo obrigatório" owner="registro_page" source_name="Então o sistema exibe a mensagem ${Text}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${registro.Alert_Message}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-02T15:17:12.590823" elapsed="0.020384"/>
+<status status="PASS" start="2024-02-02T15:30:53.655780" elapsed="0.019117"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:12.626078" level="INFO">${mensagem} = Email é um campo obrigatório</msg>
+<msg time="2024-02-02T15:30:53.694727" level="INFO">${mensagem} = Email é um campo obrigatório</msg>
 <var>${mensagem}</var>
 <arg>${registro.Alert_Message}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:12.611207" elapsed="0.014871"/>
+<status status="PASS" start="2024-02-02T15:30:53.676185" elapsed="0.018542"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${mensagem}</arg>
 <arg>${Text}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:17:12.626078" elapsed="0.000998"/>
+<status status="PASS" start="2024-02-02T15:30:53.694727" elapsed="0.001141"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:12.590317" elapsed="0.036759"/>
+<status status="PASS" start="2024-02-02T15:30:53.655780" elapsed="0.040088"/>
 </kw>
 <kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:12.627582" elapsed="2.054236"/>
+<status status="PASS" start="2024-02-02T15:30:53.695868" elapsed="2.046491"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:12.627582" elapsed="2.055145"/>
+<status status="PASS" start="2024-02-02T15:30:53.695868" elapsed="2.046491"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:09.185782" elapsed="5.497887"/>
+<status status="PASS" start="2024-02-02T15:30:50.026208" elapsed="5.717283"/>
 </test>
 <test id="s1-t6" name="TC06 - Cadastro com senha em branco" line="51">
 <kw name="Dado que o usuario esta na tela inicial do site" owner="registro_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:14.698156" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-02-02T15:30:55.754503" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${geral.URL}</arg>
 <arg>${geral.Browser}</arg>
 <arg>options=${geral.Headless}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-02T15:17:14.691905" elapsed="2.279774"/>
+<status status="PASS" start="2024-02-02T15:30:55.750289" elapsed="2.395299"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-02T15:17:16.971679" elapsed="0.109019"/>
+<status status="PASS" start="2024-02-02T15:30:58.145588" elapsed="0.106009"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:14.690852" elapsed="2.389846"/>
+<status status="PASS" start="2024-02-02T15:30:55.748714" elapsed="2.502883"/>
 </kw>
 <kw name="E clica no link &quot;Novo Usuário?&quot;" owner="registro_page">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:17.093116" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
+<msg time="2024-02-02T15:30:58.252892" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
 <arg>${registro.Link_Registro}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:17.090475" elapsed="0.280612"/>
+<status status="PASS" start="2024-02-02T15:30:58.251597" elapsed="0.269720"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:17.089500" elapsed="0.281587"/>
+<status status="PASS" start="2024-02-02T15:30:58.251597" elapsed="0.270737"/>
 </kw>
 <kw name="Quando preenche o campo nome" owner="registro_page">
 <kw name="First Name" owner="FakerLibrary">
-<msg time="2024-02-02T15:17:17.372096" level="INFO">${nome} = Noah</msg>
+<msg time="2024-02-02T15:30:58.522334" level="INFO">${nome} = Lara</msg>
 <var>${nome}</var>
-<status status="PASS" start="2024-02-02T15:17:17.372096" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:58.522334" elapsed="0.001261"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:17.372096" level="INFO">Typing text 'Noah' into text field '//input[@id="nome"]'.</msg>
+<msg time="2024-02-02T15:30:58.524135" level="INFO">Typing text 'Lara' into text field '//input[@id="nome"]'.</msg>
 <arg>${registro.Input_Nome}</arg>
 <arg>${nome}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:17.372096" elapsed="0.080860"/>
+<status status="PASS" start="2024-02-02T15:30:58.523595" elapsed="0.104338"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:17.371087" elapsed="0.081869"/>
+<status status="PASS" start="2024-02-02T15:30:58.522334" elapsed="0.105599"/>
 </kw>
 <kw name="E preenche o campo email" owner="registro_page">
 <kw name="Free Email" owner="FakerLibrary">
-<msg time="2024-02-02T15:17:17.454084" level="INFO">${email} = rodriguescaue@yahoo.com.br</msg>
+<msg time="2024-02-02T15:30:58.629955" level="INFO">${email} = alana21@bol.com.br</msg>
 <var>${email}</var>
-<status status="PASS" start="2024-02-02T15:17:17.454084" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:58.629441" elapsed="0.000514"/>
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:17.455095" level="INFO">Typing text 'rodriguescaue@yahoo.com.br' into text field '//input[@id="email"]'.</msg>
+<msg time="2024-02-02T15:30:58.630460" level="INFO">Typing text 'alana21@bol.com.br' into text field '//input[@id="email"]'.</msg>
 <arg>${registro.Input_Email}</arg>
 <arg>${email}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:17.454084" elapsed="0.094887"/>
+<status status="PASS" start="2024-02-02T15:30:58.629955" elapsed="0.117704"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:17.454084" elapsed="0.094887"/>
+<status status="PASS" start="2024-02-02T15:30:58.629441" elapsed="0.118218"/>
 </kw>
 <kw name="E nao preenche o campo senha" owner="registro_page">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${registro.Input_Senha}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:17.549981" elapsed="0.084907"/>
+<status status="PASS" start="2024-02-02T15:30:58.749270" elapsed="0.064813"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:17.548971" elapsed="0.085917"/>
+<status status="PASS" start="2024-02-02T15:30:58.748761" elapsed="0.065322"/>
 </kw>
 <kw name="E pressiona ENTER no teclado" owner="registro_page">
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:17.636887" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
-<msg time="2024-02-02T15:17:18.128907" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-02-02T15:17:18.128907" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2024-02-02T15:30:58.816118" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
+<msg time="2024-02-02T15:30:59.325983" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-02-02T15:30:59.325983" level="INFO">Releasing special key ENTER.</msg>
 <arg>${registro.Button_Cadastrar}</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:17.635887" elapsed="0.498761"/>
+<status status="PASS" start="2024-02-02T15:30:58.815114" elapsed="0.515011"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:17.635887" elapsed="0.498761"/>
+<status status="PASS" start="2024-02-02T15:30:58.815114" elapsed="0.515011"/>
 </kw>
 <kw name="Então o sistema exibe a mensagem Senha é um campo obrigatório" owner="registro_page" source_name="Então o sistema exibe a mensagem ${Text}">
 <kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
 <arg>${registro.Alert_Message}</arg>
 <arg>10</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" start="2024-02-02T15:17:18.135647" elapsed="0.020696"/>
+<status status="PASS" start="2024-02-02T15:30:59.330639" elapsed="0.022969"/>
 </kw>
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:18.182718" level="INFO">${mensagem} = Senha é um campo obrigatório</msg>
+<msg time="2024-02-02T15:30:59.377842" level="INFO">${mensagem} = Senha é um campo obrigatório</msg>
 <var>${mensagem}</var>
 <arg>${registro.Alert_Message}</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:18.156343" elapsed="0.026375"/>
+<status status="PASS" start="2024-02-02T15:30:59.353608" elapsed="0.024234"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${mensagem}</arg>
 <arg>${Text}</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:17:18.182718" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:30:59.377842" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:18.135647" elapsed="0.047071"/>
+<status status="PASS" start="2024-02-02T15:30:59.330639" elapsed="0.047203"/>
 </kw>
 <kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:18.183259" elapsed="2.062931"/>
+<status status="PASS" start="2024-02-02T15:30:59.379936" elapsed="2.104153"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:18.183259" elapsed="2.062931"/>
+<status status="PASS" start="2024-02-02T15:30:59.379388" elapsed="2.104701"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:14.688820" elapsed="5.558842"/>
+<status status="PASS" start="2024-02-02T15:30:55.746155" elapsed="5.737934"/>
 </test>
 <test id="s1-t7" name="TC07 - Cadastro com todos os campos em branco" line="60">
 <kw name="Dado que o usuario esta na tela inicial do site" owner="registro_page">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:20.257827" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
+<msg time="2024-02-02T15:31:01.490090" level="INFO">Opening browser 'chrome' to base url 'https://seubarriga.wcaquino.me/login'.</msg>
 <arg>${geral.URL}</arg>
 <arg>${geral.Browser}</arg>
 <arg>options=${geral.Headless}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-02-02T15:17:20.254312" elapsed="2.405136"/>
+<status status="PASS" start="2024-02-02T15:31:01.487967" elapsed="2.405630"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2024-02-02T15:17:22.659448" elapsed="0.124345"/>
+<status status="PASS" start="2024-02-02T15:31:03.893597" elapsed="0.121846"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:20.253295" elapsed="2.530498"/>
+<status status="PASS" start="2024-02-02T15:31:01.487408" elapsed="2.529111"/>
 </kw>
 <kw name="E clica no link &quot;Novo Usuário?&quot;" owner="registro_page">
 <kw name="Click Link" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:22.783793" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
+<msg time="2024-02-02T15:31:04.019515" level="INFO">Clicking link '//a[@href="/cadastro"]'.</msg>
 <arg>${registro.Link_Registro}</arg>
 <doc>Clicks a link identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:22.783793" elapsed="0.275130"/>
+<status status="PASS" start="2024-02-02T15:31:04.018513" elapsed="0.284518"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:22.783793" elapsed="0.275130"/>
+<status status="PASS" start="2024-02-02T15:31:04.017515" elapsed="0.285516"/>
 </kw>
 <kw name="Quando preenche nao preenche o campo nome" owner="registro_page">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${registro.Input_Nome}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:23.059974" elapsed="0.035439"/>
+<status status="PASS" start="2024-02-02T15:31:04.304035" elapsed="0.039352"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:23.059974" elapsed="0.035439"/>
+<status status="PASS" start="2024-02-02T15:31:04.304035" elapsed="0.039352"/>
 </kw>
 <kw name="E nao preenche o campo email" owner="registro_page">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${registro.Input_Email}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:23.096407" elapsed="0.064294"/>
+<status status="PASS" start="2024-02-02T15:31:04.344049" elapsed="0.027236"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:23.095413" elapsed="0.065288"/>
+<status status="PASS" start="2024-02-02T15:31:04.344049" elapsed="0.027295"/>
 </kw>
 <kw name="E nao preenche o campo senha" owner="registro_page">
 <kw name="Clear Element Text" owner="SeleniumLibrary">
 <arg>${registro.Input_Senha}</arg>
 <doc>Clears the value of the text-input-element identified by ``locator``.</doc>
-<status status="PASS" start="2024-02-02T15:17:23.161211" elapsed="0.028425"/>
+<status status="PASS" start="2024-02-02T15:31:04.371344" elapsed="0.032194"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:23.161211" elapsed="0.028425"/>
+<status status="PASS" start="2024-02-02T15:31:04.371344" elapsed="0.032194"/>
 </kw>
 <kw name="E pressiona ENTER no teclado" owner="registro_page">
 <kw name="Press Keys" owner="SeleniumLibrary">
-<msg time="2024-02-02T15:17:23.191642" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
-<msg time="2024-02-02T15:17:23.681184" level="INFO">Pressing special key ENTER to element.</msg>
-<msg time="2024-02-02T15:17:23.681184" level="INFO">Releasing special key ENTER.</msg>
+<msg time="2024-02-02T15:31:04.405270" level="INFO">Sending key(s) ('ENTER',) to //input[@value='Cadastrar'] element.</msg>
+<msg time="2024-02-02T15:31:04.918647" level="INFO">Pressing special key ENTER to element.</msg>
+<msg time="2024-02-02T15:31:04.918647" level="INFO">Releasing special key ENTER.</msg>
 <arg>${registro.Button_Cadastrar}</arg>
 <arg>ENTER</arg>
 <doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:23.190647" elapsed="0.502337"/>
+<status status="PASS" start="2024-02-02T15:31:04.404765" elapsed="0.520762"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:23.190647" elapsed="0.502337"/>
+<status status="PASS" start="2024-02-02T15:31:04.403538" elapsed="0.521989"/>
 </kw>
 <kw name="Então o sistema exibe as mensagens" owner="registro_page">
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${alerta1}</arg>
 <arg>Nome é um campo obrigatório</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:17:23.693993" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:31:04.926031" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${alerta2}</arg>
 <arg>Email é um campo obrigatório</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:17:23.693993" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:31:04.926031" elapsed="0.000000"/>
 </kw>
 <kw name="Should Be Equal" owner="BuiltIn">
 <arg>${alerta3}</arg>
 <arg>Senha é um campo obrigatório</arg>
 <doc>Fails if the given objects are unequal.</doc>
-<status status="PASS" start="2024-02-02T15:17:23.694989" elapsed="0.000000"/>
+<status status="PASS" start="2024-02-02T15:31:04.927039" elapsed="0.000000"/>
 </kw>
 <arg>Nome é um campo obrigatório</arg>
 <arg>Email é um campo obrigatório</arg>
 <arg>Senha é um campo obrigatório</arg>
-<status status="PASS" start="2024-02-02T15:17:23.693993" elapsed="0.000996"/>
+<status status="PASS" start="2024-02-02T15:31:04.926031" elapsed="0.001008"/>
 </kw>
 <kw name="Fechar navegador" owner="setup_teardown" type="TEARDOWN">
 <kw name="Close Browser" owner="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-02-02T15:17:23.695493" elapsed="2.057659"/>
+<status status="PASS" start="2024-02-02T15:31:04.927039" elapsed="2.041398"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:23.695493" elapsed="2.057659"/>
+<status status="PASS" start="2024-02-02T15:31:04.927039" elapsed="2.041398"/>
 </kw>
-<status status="PASS" start="2024-02-02T15:17:20.252113" elapsed="5.501039"/>
+<status status="PASS" start="2024-02-02T15:31:01.486353" elapsed="5.482987"/>
 </test>
-<status status="PASS" start="2024-02-02T15:16:45.396202" elapsed="40.357949"/>
+<status status="PASS" start="2024-02-02T15:30:26.372892" elapsed="40.598622"/>
 </suite>
 <statistics>
 <total>
