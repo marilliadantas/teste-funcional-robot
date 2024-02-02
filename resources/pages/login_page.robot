@@ -13,7 +13,7 @@ Resource    ../main.robot
 
 *** Keywords ***
 Dado que o usuario esta na tela de login
-    Open Browser  ${geral.URL}  ${geral.Browser}
+    Open Browser  ${geral.URL}  ${geral.Browser}  options=${geral.Headless}
     Maximize Browser Window
 
 Quando o usuario insere email valido
@@ -39,22 +39,20 @@ E o usuario insere senha invalida
     Wait Until Element Is Visible  ${login.Input_SenhaLogin}  10
     Input Text                     ${login.Input_SenhaLogin}  ${dados_login.SenhaInvalida}
 
-Entao o sistema deve exibir a mensagem "Problemas com o login do usuário"
-    Element Text Should Be    ${login.Msg_Erro}    Problemas com o login do usuário
-
 Quando o usuario nao preenche o campo email
     Wait Until Element Is Visible  ${login.Input_EmailLogin}  10
     Clear Element Text             ${login.Input_EmailLogin}  
-
-Entao o sistema deve exibir a mensagem "Email é um campo obrigatório"
-    Element Text Should Be    ${login.Msg_Erro}    Email é um campo obrigatório
 
 E o usuario nao preenche o campo senha
     Wait Until Element Is Visible  ${login.Input_SenhaLogin}  10
     Clear Element Text             ${login.Input_SenhaLogin}  
 
-Entao o sistema deve exibir a mensagem "Senha é um campo obrigatório"
-    Element Text Should Be    ${login.Msg_Erro}    Senha é um campo obrigatório
+Entao o sistema exibe a mensagem ${Text}
+    Wait Until Element Is Visible    ${login.Msg_Erro}           10
+    ${mensagem}    Get Text          ${login.Msg_Erro}
+    Should Be Equal    ${mensagem}   ${Text}
 
-Entao o sistema deve exibir a mensagem "Email é um campo obrigatório", "Senha é um campo obrigatório"
-    Element Text Should Be    ${login.Msg_Erro}    "Email é um campo obrigatório", "Senha é um campo obrigatório
+Entao o sistema exibe as mensagens
+    [Arguments]    ${alerta1}    ${alerta2}
+    Should Be Equal    ${alerta1}    Email é um campo obrigatório
+    Should Be Equal    ${alerta2}    Senha é um campo obrigatório

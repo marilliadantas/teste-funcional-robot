@@ -5,3 +5,4 @@ Resource    ../main.robot
 &{geral}
 ...     URL=https://seubarriga.wcaquino.me/login
 ...     Browser=chrome
+...     Headless=add_argument("--headless")
