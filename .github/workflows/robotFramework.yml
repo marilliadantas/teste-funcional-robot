@@ -29,4 +29,4 @@ jobs:
         pip install chromedriver
     - name: Run Test
       run: |
-        robot -d results path/to/suites
+        robot -d results suites
