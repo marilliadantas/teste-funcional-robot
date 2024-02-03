@@ -50,7 +50,7 @@ E pressiona ENTER no teclado
 E preenche o campo email com email ja cadastrado
     Input Text    ${registro.Input_Email}     ${dados_login.Email}
     
-Então o sistema exibe a mensagem ${Text}
+Então o sistema exibe a mensagem "${Text}"
     Wait Until Element Is Visible    ${registro.Alert_Message}           10
     ${mensagem}    Get Text          ${registro.Alert_Message}
     Should Be Equal    ${mensagem}   ${Text}

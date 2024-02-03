@@ -48,7 +48,7 @@ E o usuario nao preenche o campo senha
     Wait Until Element Is Visible  ${login.Input_SenhaLogin}  10
     Clear Element Text             ${login.Input_SenhaLogin}  
 
-Entao o sistema exibe a mensagem ${Text}
+Entao o sistema exibe a mensagem "${Text}"
     Wait Until Element Is Visible    ${login.Msg_Erro}        10
     ${mensagem}    Get Text          ${login.Msg_Erro}
     Should Be Equal    ${mensagem}   ${Text}

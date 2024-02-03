@@ -2,10 +2,13 @@
 Resource    ../main.robot
 
 *** Keywords ***
-# Acessar o site e logar 
-#     Dado que eu acesse o php travels
-#     E realize o cadastro 
-#     E faça o Login
+Acessar o site e logar 
+    Dado que o usuario esta na tela de login
+    Quando o usuario insere email valido
+    E o usuario insere senha valida
+    E clica em "Entrar"
+    # E realize o cadastro 
+    # E faça o Login
 
 Acessar site
     Open Browser  ${geral.URL}  ${geral.Browser}  options=${geral.Headless}
