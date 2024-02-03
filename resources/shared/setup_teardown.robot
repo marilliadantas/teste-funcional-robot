@@ -7,6 +7,9 @@ Resource    ../main.robot
 #     E realize o cadastro 
 #     E faça o Login
 
+Acessar site
+    Open Browser  ${geral.URL}  ${geral.Browser}  options=${geral.Headless}
+
 Fechar navegador
     Close Browser
 

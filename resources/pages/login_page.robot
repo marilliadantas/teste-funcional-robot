@@ -13,7 +13,7 @@ Resource    ../main.robot
 
 *** Keywords ***
 Dado que o usuario esta na tela de login
-    Open Browser  ${geral.URL}  ${geral.Browser}  options=${geral.Headless}
+    Acessar site
     Maximize Browser Window
 
 Quando o usuario insere email valido
