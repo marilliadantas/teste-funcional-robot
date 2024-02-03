@@ -25,45 +25,45 @@ Quando clicar em contas
     Click Element                      ${contas.Dropdown_Contas}  
 
 E clicar em adicionar
-    Wait Until Element Is Visible      ${contas.Button_Adicionar}     10
+    Wait Until Element Is Visible      ${contas.Button_Adicionar}    10
     Click Element                      ${contas.Button_Adicionar}  
 
 E clicar em listar
-    Wait Until Element Is Visible      ${contas.Button_Listar}        10
+    Wait Until Element Is Visible      ${contas.Button_Listar}       10
     Click Element                      ${contas.Button_Listar}  
 
 E inserir o nome da conta
-    Wait Until Element Is Visible      ${contas.Input_Nome_Conta}     10
-    Input Text                         ${contas.Input_Nome_Conta}     Nubank
+    Wait Until Element Is Visible      ${contas.Input_Nome_Conta}    10
+    Input Text                         ${contas.Input_Nome_Conta}    Nubank
 
 E clicar em salvar
-    Wait Until Element Is Visible      ${contas.Button_Salvar}        10
+    Wait Until Element Is Visible      ${contas.Button_Salvar}       10
     Click Element                      ${contas.Button_Salvar}  
 
 E clicar em editar
-    Wait Until Element Is Visible      ${contas.Button_Editar}        10
+    Wait Until Element Is Visible      ${contas.Button_Editar}       10
     Click Element                      ${contas.Button_Editar}  
 
 E editar o nome da conta
-    Wait Until Element Is Visible      ${contas.Input_Nome_Conta}     10
-    Input Text                         ${contas.Input_Nome_Conta}     Inter
+    Wait Until Element Is Visible      ${contas.Input_Nome_Conta}    10
+    Input Text                         ${contas.Input_Nome_Conta}    Inter
 
 E clicar em remover conta
-    Wait Until Element Is Visible      ${contas.Button_Remover}        10
+    Wait Until Element Is Visible      ${contas.Button_Remover}      10
     Click Element                      ${contas.Button_Remover}  
 
 Entao o sistema exibe uma conta "${NomeConta}"                
-    Element Text Should Be             ${contas.Segunda_Lista}        Nubank
+    Element Text Should Be             ${contas.Segunda_Lista}       Nubank
 
 Entao o sistema exibe o nome da conta editado ${NomeContaEditado}
-    Wait Until Element Is Visible      ${contas.Segunda_Lista}        10
+    Wait Until Element Is Visible      ${contas.Segunda_Lista}       10
     Click Element                      ${contas.Segunda_Lista}  
 
 E exibe uma mensagem "${MsgWelcome}"
-    Element Text Should Be             ${contas.Msg_Sucesso}          Conta alterada com sucesso!
+    Element Text Should Be             ${contas.Msg_Sucesso}        Conta alterada com sucesso!
 
 Entao o sistema exibe uma mensagem "${MsgSuccess}"
-    Wait Until Element Is Visible    ${contas.Msg_Sucesso}        10
+    Wait Until Element Is Visible    ${contas.Msg_Sucesso}           10
     ${mensagem}    Get Text          ${contas.Msg_Sucesso}
     Should Be Equal    ${mensagem}   ${MsgSuccess}
     
