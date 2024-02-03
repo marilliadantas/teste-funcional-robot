@@ -28,7 +28,7 @@ E clica em "Entrar"
     Wait Until Element Is Visible  ${login.Button_Logar}      10
     Click Element                  ${login.Button_Logar} 
 
-Entao o sistema redireciona para a página inicial exibindo a mensagem ${Texto}
+Entao o sistema redireciona para a página inicial exibindo a mensagem "${MsgWelcome}"
     Element Text Should Be    ${login.Msg_Welcome}    Bem vindo, Kylian!
     Location Should Be        https://seubarriga.wcaquino.me/logar
 
@@ -49,7 +49,7 @@ E o usuario nao preenche o campo senha
     Clear Element Text             ${login.Input_SenhaLogin}  
 
 Entao o sistema exibe a mensagem ${Text}
-    Wait Until Element Is Visible    ${login.Msg_Erro}           10
+    Wait Until Element Is Visible    ${login.Msg_Erro}        10
     ${mensagem}    Get Text          ${login.Msg_Erro}
     Should Be Equal    ${mensagem}   ${Text}
 
