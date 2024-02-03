@@ -1,6 +1,6 @@
 *.pyc
-/results
-/__pycache__/
+*/Results
+*/__pycache__
 .vscode
 *.zip
 *.7z
