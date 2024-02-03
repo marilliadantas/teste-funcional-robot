@@ -1,5 +1,5 @@
 *.pyc
-*/Results
+*/results
 */__pycache__
 .vscode
 *.zip
