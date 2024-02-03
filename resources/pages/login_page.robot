@@ -30,6 +30,7 @@ E clica em "Entrar"
 
 Entao o sistema redireciona para a página inicial exibindo a mensagem ${Texto}
     Element Text Should Be    ${login.Msg_Welcome}    Bem vindo, Kylian!
+    Location Should Be        https://seubarriga.wcaquino.me/logar
 
 Quando o usuario insere email invalido
     Wait Until Element Is Visible  ${login.Input_EmailLogin}  10

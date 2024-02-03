@@ -29,4 +29,4 @@ jobs:
         pip install chromedriver
     - name: Run Test
       run: |
-        robot -x 'outputxunit.xml' -N "Teste do site Sr.Barriga" suites/login suites/registro
+        robot -d results path/to/suites
