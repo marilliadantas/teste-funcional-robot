@@ -34,7 +34,7 @@ E clicar em listar
 
 E inserir o nome da conta
     Wait Until Element Is Visible      ${contas.Input_Nome_Conta}    10
-    Input Text                         ${contas.Input_Nome_Conta}    Nubank
+    Input Text                         ${contas.Input_Nome_Conta}    ${dados_contas.NomeConta}
 
 E clicar em salvar
     Wait Until Element Is Visible      ${contas.Button_Salvar}       10
@@ -46,14 +46,14 @@ E clicar em editar
 
 E editar o nome da conta
     Wait Until Element Is Visible      ${contas.Input_Nome_Conta}    10
-    Input Text                         ${contas.Input_Nome_Conta}    Inter
+    Input Text                         ${contas.Input_Nome_Conta}    ${dados_contas.ContaEditada}
 
 E clicar em remover conta
     Wait Until Element Is Visible      ${contas.Button_Remover}      10
     Click Element                      ${contas.Button_Remover}  
 
 Entao o sistema exibe uma conta "${NomeConta}"                
-    Element Text Should Be             ${contas.Segunda_Lista}       Nubank
+    Element Text Should Be             ${contas.Segunda_Lista}       ${dados_contas.NomeConta}
 
 Entao o sistema exibe o nome da conta editado ${NomeContaEditado}
     Wait Until Element Is Visible      ${contas.Segunda_Lista}       10
@@ -63,7 +63,7 @@ E exibe uma mensagem "${MsgWelcome}"
     Element Text Should Be             ${contas.Msg_Sucesso}        Conta alterada com sucesso!
 
 Entao o sistema exibe uma mensagem "${MsgSuccess}"
-    Wait Until Element Is Visible    ${contas.Msg_Sucesso}           10
-    ${mensagem}    Get Text          ${contas.Msg_Sucesso}
-    Should Be Equal    ${mensagem}   ${MsgSuccess}
+    Wait Until Element Is Visible      ${contas.Msg_Sucesso}           10
+    ${mensagem}    Get Text            ${contas.Msg_Sucesso}
+    Should Be Equal    ${mensagem}     ${MsgSuccess}
     

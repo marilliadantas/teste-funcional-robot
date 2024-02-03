@@ -6,6 +6,7 @@ Library    FakerLibrary    locale=pt_BR
 Resource   data/geral.robot
 Resource   data/registro.robot
 Resource   data/login.robot
+Resource   data/contas.robot
 
 #Shared
 Resource   shared/setup_teardown.robot
