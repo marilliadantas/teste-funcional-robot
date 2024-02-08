@@ -3,7 +3,7 @@ Resource    ../main.robot
 
 *** Variables ***
 &{contas}
-#Elementos página de Login
+#Elementos página de Contas
 ...   Dropdown_Contas=//a[@class="dropdown-toggle"]
 ...   Button_Adicionar=//a[@href="/addConta"]
 ...   Input_Nome_Conta=//input[@id="nome"]

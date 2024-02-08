@@ -3,7 +3,7 @@ Resource    ../main.robot
 
 *** Variables ***
 &{registro}
-#Elementos página de Login
+#Elementos página de Registro
 ...   Input_Nome=//input[@id="nome"]
 ...   Input_Email=//input[@id="email"]
 ...   Input_Senha=//input[@id="senha"]
