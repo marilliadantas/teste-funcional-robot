@@ -28,6 +28,7 @@ jobs:
         run: |
           pip install robotframework-seleniumlibrary
           pip install robotframework-faker
+          pip install setuptools
 
       - name: Run Test
         run: |
